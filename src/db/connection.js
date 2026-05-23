@@ -4,7 +4,8 @@ const logger = require('../utils/logger');
 
 const connect = async () => {
   await mongoose.connect(config.mongoUri);
-  logger.info('MongoDB connected', { uri: config.mongoUri });
+  const safeUri = config.mongoUri.replace(/:\/\/[^@]+@/, '://***:***@');
+  logger.info('MongoDB connected', { uri: safeUri });
 };
 
 const disconnect = async () => {

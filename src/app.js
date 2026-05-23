@@ -20,7 +20,7 @@ app.use(errorHandler);
 
 const start = async () => {
   await connect();
-  app.listen(config.port, () => {
+  app.listen(config.port, '0.0.0.0', () => {
     logger.info('Server listening', { port: config.port });
   });
 };
