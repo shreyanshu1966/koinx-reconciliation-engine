@@ -2,6 +2,10 @@
 
 A production-grade Node.js service that ingests two CSV exports of the same crypto account (one from the user, one from the exchange), matches transactions across them with configurable tolerances, and produces a structured reconciliation report.
 
+**Live API:** `https://koinx-reconciliation-engine-production.up.railway.app`
+
+> Quick test: `POST https://koinx-reconciliation-engine-production.up.railway.app/reconcile`
+
 ---
 
 ## Stack
